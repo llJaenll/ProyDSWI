@@ -113,5 +113,39 @@ CREATE TABLE tbMovimiento(
 )
 GO
 
+DROP TABLE IF EXISTS tbReclamo
+CREATE TABLE tbReclamo(
+	idReclamo int PRIMARY KEY IDENTITY(1,1),
+	idComprador int FOREIGN KEY REFERENCES tbPersona(idPersona),
+	idVendedor int FOREIGN KEY REFERENCES tbPersona(idPersona)
+)
+GO
+
+DROP TABLE IF EXISTS tbDetalleReclamo
+CREATE TABLE tbDetalleReclamo(
+	idDetalleReclamo int PRIMARY KEY IDENTITY(1,1),
+	idReclamo int FOREIGN KEY REFERENCES tbReclamo(idReclamo),
+	descripReclamo varchar(500),
+	imagenReclamo image
+)
+GO
+
+DROP TABLE IF EXISTS tbComentario
+CREATE TABLE tbComentario(
+	idComentario int PRIMARY KEY IDENTITY(1,1),
+	idComprador int FOREIGN KEY REFERENCES tbPersona(idPersona),
+	idVendedor int FOREIGN KEY REFERENCES tbPersona(idPersona)
+)
+GO
+
+DROP TABLE IF EXISTS tbDetalleComentario
+CREATE TABLE tbDetalleComentario(
+	idDetalleComentario int PRIMARY KEY IDENTITY(1,1),
+	idComentario int FOREIGN KEY REFERENCES tbComentario(idComentario),
+	pregunta varchar(500),
+	respuesta varchar(500)
+)
+GO
+
 
 
