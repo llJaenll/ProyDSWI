@@ -102,13 +102,23 @@ CREATE TABLE tbSubasta(
 )
 GO
 
+DROP TABLE IF EXISTS tbDetalleSubasta
+CREATE TABLE tbDetalleSubasta(
+	idDetalleSubasta int PRIMARY KEY IDENTITY(1,1),
+	idSubasta int FOREIGN KEY REFERENCES tbSubasta(idSubasta),
+	idPujador int FOREIGN KEY REFERENCES tbPersona(idPersona),
+	prePujada money NOT NULL,
+	puesto int NOT NULL
+)
+GOs
+
 DROP TABLE IF EXISTS tbMovimiento
 CREATE TABLE tbMovimiento(
 	idMovimiento int PRIMARY KEY IDENTITY(1,1),
 	idVendedor int NOT NULL FOREIGN KEY REFERENCES tbPersona(idPersona),
 	idSubasta int NOT NULL FOREIGN KEY REFERENCES tbSubasta(idSubasta),
 	preVenta money NOT NULL,
-	preEnvio money NOT NULL,
+	preEnvio money NULL,
 	totalMovimiento money NOT NULL
 )
 GO
@@ -125,8 +135,8 @@ DROP TABLE IF EXISTS tbDetalleReclamo
 CREATE TABLE tbDetalleReclamo(
 	idDetalleReclamo int PRIMARY KEY IDENTITY(1,1),
 	idReclamo int FOREIGN KEY REFERENCES tbReclamo(idReclamo),
-	descripReclamo varchar(500),
-	imagenReclamo image
+	descripReclamo varchar(500) NOT NULL,
+	imagenReclamo varchar(300) NULL
 )
 GO
 
@@ -142,8 +152,8 @@ DROP TABLE IF EXISTS tbDetalleComentario
 CREATE TABLE tbDetalleComentario(
 	idDetalleComentario int PRIMARY KEY IDENTITY(1,1),
 	idComentario int FOREIGN KEY REFERENCES tbComentario(idComentario),
-	pregunta varchar(500),
-	respuesta varchar(500)
+	pregunta varchar(500) NOT NULL,
+	respuesta varchar(500) NOT NULL
 )
 GO
 
