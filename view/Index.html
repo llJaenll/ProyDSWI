@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!--referencia de iconos fontgoogle-->
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
-    <link rel="stylesheet" href="../util/estiloIndex.css">
+    <link rel="stylesheet" href="../Content/estiloIndex.css">
 </head>
 <body ng-app="SubastasApp">
-   <div ng-controller="IndexController">
+   <div ng-controller="IndexController" style="height: 100%;">
        <header id="cabecera">
             <nav id="menu">
                 <ul>                    
@@ -31,10 +31,20 @@
             </nav>
            
        </header>
-       <section>
-           
+       <section style="height: 100%;">
+           <nav id="latmenu">
+               <ul>
+                    <li><a href=""><i class="fas fa-asterisk"></i> Categorias</a></li>
+                    <li><a href=""><i class="fas fa-archive"></i> Subastas Actuales</a></li>
+                    <li><a href=""><i class="fas fa-comments-dollar"></i> Reporte de Subastas</a></li>
+                    <li><a href=""><i class="fas fa-exclamation"></i> Reclamo</a></li>
+                </ul>
+            </nav>
            
        </section>
+       <div ng-view="" >
+           
+       </div>
    </div>
     
 </body>

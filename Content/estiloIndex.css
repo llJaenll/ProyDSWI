@@ -1,6 +1,10 @@
-body{
+html,body{
     font-family: 'Noto Serif KR', sans-serif;
+    margin:0px;
+    height:100%;
+    overflow: hidden;
 }
+
 #menu ul{
     margin: 0;
     list-style: none;
@@ -43,3 +47,28 @@ body{
    
 }
 
+/*Menu lateral*/
+#latmenu{
+    height: 100%;
+    background-color: #0080ff ;
+    height: 100%;
+    float: left;
+}
+#latmenu ul{
+    list-style: none;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    float: left;
+    background-color: #0080ff;
+    margin: 0;
+    
+}
+#latmenu ul li{
+    box-shadow: 10px 0px 5px -6px rgba(0,0,0,0.75);
+    padding: 15px 15px 15px 25px;
+}
+#latmenu li a{
+    color:white;
+    
+}
