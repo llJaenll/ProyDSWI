@@ -1,0 +1,69 @@
+body{
+    font-family: 'Noto Serif KR', sans-serif;
+}
+#menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0080ff;
+
+}
+#menu li{
+    display: block;
+    padding: 15px 5%;
+    color:white;
+    border-left:  2px solid #000;
+    font-style: 255px;
+    cursor: pointer;
+}
+#submenu{
+    margin-top: 0.02%;
+    
+}
+#submenu ul{
+
+    list-style: none;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    float: right;
+    background-color: #0080ff;
+    margin: 0;
+    margin-right: 0.5%;
+    
+}
+#submenu ul li{
+    border-bottom: 1px solid #000;
+    padding: 15px 15px 15px 25px;
+}
+#submenu ul li a{
+    color:white;
+   
+}
+/*Menu lateral*/
+#latmenu{
+    height: 100%;
+    background-color: #0080ff ;
+    height: 100%;
+    float: left;
+}
+#latmenu ul{
+    list-style: none;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    float: left;
+    background-color: #0080ff;
+    margin: 0;
+    
+}
+#latmenu ul li{
+    box-shadow: 10px 0px 5px -6px rgba(0,0,0,0.75);
+    padding: 15px 15px 15px 25px;
+}
+#latmenu li a{
+    color:white;
+    
+}
