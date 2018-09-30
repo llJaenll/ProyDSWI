@@ -1,4 +1,4 @@
-angular.module('SubastasApp', [])
+angular.module('SubastasApp', ['ngRoute'])
   .controller('IndexController', function($scope) {
     $scope.mosSub=false;
     $scope.ocultar = function() {
@@ -7,5 +7,15 @@ angular.module('SubastasApp', [])
         
     };
  
-  });
-    
+  }) 
+  .controller('PrincipalController', function($scope) {
+
+ 
+  })
+.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: '/../view/Principal.html',
+        controller: 'PrincipalController'
+      });
+  }]);
