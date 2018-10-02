@@ -13,7 +13,7 @@ html,body{
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    background-color: #0080ff;
+    background-color: #006EB2;
 
 }
 #menu li{
@@ -38,25 +38,31 @@ html,body{
     display: block;
     flex-direction: column;
     float: right;
-    background-color: #0080ff;
+    background-color: #006EB2;
     margin: 0;
-    margin-right: 0.5%;
     
 }
 #submenu ul li{
+    margin: 0;
     border-bottom: 1px solid #000;
     padding: 15px 15px 15px 25px;
 }
+#submenu ul li:hover{
+    transition: 1s;
+    background-color: #82CFFF;
+}
+
 #submenu ul li a{
     color:white;
-   
+   text-decoration: none;
 }
 
 /*Menu lateral*/
 #latmenu{
     height: 100%;
     width: 11%;
-    background-color: #0080ff ;
+    background-color: #006EB2 ;
+    
     float: left;    
     
 }
@@ -66,16 +72,29 @@ html,body{
     display: block;
     flex-direction: column;
     float: left;
-    background-color: #0080ff;
+    background-color: #006EB2;
     margin: 0;
     
 }
+
+#latmenu ul li:hover{
+    transition: 1s;
+    background-color: #82CFFF;
+}
+
+
+
 #latmenu ul li{
+    box-sizing: border-box;
+    border-top: 2px solid #fff;
+    border-bottom: 1px solid #fff;
     box-shadow: 10px 0px 5px -6px rgba(0,0,0,0.75);
     padding: 15px 15px 15px 25px;
+    margin: 0;
 }
 #latmenu li a{
-    color:white;    
+    color:white; 
+    text-decoration: none;
 }
 #ladob{
 
