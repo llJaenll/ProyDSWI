@@ -1,22 +1,21 @@
-
-#contenido{
+#contenido {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
     background-color: #fff;
-    padding-top: 1.5%;
-    
+    z-index: -100000;
 }
 .subasta{
-    border: 6px solid #7CB6A1;
-    height: 400px;
+    
+    height: 400px;  
     width: 25%;
     height: 100%;
-    background-color: #2AA69C;
+    background-color: #E5EFEE;
     margin-left: 1%;
     margin-top: 0.9%;
+    margin-bottom: 0.9%;
     
 }
 .subasta>img{
@@ -34,7 +33,7 @@
 .subasta>h1,h2{
     text-align: center;
     font-size: 20px;
-    color:#fff;/*#ff0300;*/
+    color:#000;/*#ff0300;*/
     margin-bottom: 0%;
 }
 
@@ -50,9 +49,12 @@ ul>li{
     display: block;
     padding: 5px 0px 5px 0px;
     margin-left: 4%;
-    color:#fff;
+    color:#000;
     flex-grow: 1;
     font-size: 22px;
     
-    
+}
+#cab h2{
+    text-align: center;
+    padding: 15px 5px 5px 5px;
 }
