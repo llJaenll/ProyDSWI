@@ -1,14 +1,13 @@
 angular.module('SubastasApp', ['ngRoute'])
-  .controller('IndexController', function($scope) {
+.controller('IndexController', function($scope) {
     $scope.mosSub=false;
     $scope.ocultar = function() {
         if($scope.mosSub) $scope.mosSub=false;
         else  $scope.mosSub=true;
-        
-    };
- 
-  }) 
-  .controller('PrincipalController', function($scope) {
+        };
+})
+
+.controller('PrincipalController', function($scope) {
     $scope.productos =[
         {
             producto:'casaca',
