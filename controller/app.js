@@ -1,11 +1,4 @@
 angular.module('SubastasApp', ['ngRoute'])
-.controller('IndexController', function($scope) {
-    $scope.mosSub=false;
-    $scope.ocultar = function() {
-        if($scope.mosSub) $scope.mosSub=false;
-        else  $scope.mosSub=true;
-        };
-})
 
 .controller('PrincipalController', function($scope) {
     $scope.productos =[
@@ -42,12 +35,40 @@ angular.module('SubastasApp', ['ngRoute'])
         }                
         
     ];
+     $scope.imagenes=[
+        {
+            url:"../img/banne1.jpg"
+        },
+        {
+            url:"../img/banner2.jpg"
+        },
+        {
+           url:"../img/banner3.jpg"
+        }
+    ];
+    $scope.$watch('$viewContentLoaded', function(){
+        console.log("ddd");
+    });
+    $scope.puntos=[
+        {
+            estado:true
+        },
+        {
+            estado:false
+        },
+        {
+            estado:false
+        },
+        {
+            estado:false
+        },
+    ];
  
   })
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/../view/Principal.html',
+        templateUrl: '../view/Index.html',
         controller: 'PrincipalController'
       });
   }]);
